@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/index.css" rel="stylesheet"></link>
+    <title>Document</title>
+    
+</head>
+<body>
+    <!-- layer -->
+    <div class="layer"></div>
+    <!-- todo app -->
+    <div id="app" class="container">
+        <div class="todos">
+            <h1>Todo App</h1>
+           <form class="addTodo">
+                <input type="text" class="newTodo" placeholder="Add a new todo">
+                <button type="submit" class="addTodo">Add</button>
+            </form>
+            <ul>
+                <li v-for="todo in todos">
+                    <span>{{ todo }}</span>
+                    <button @click="removeTodo(todo)">X</button>
+                </li>
+            </ul>
+            </div>
+    </div>
+    <script src="dist/bundle.js"></script>
+</body>
+</html>
